@@ -9,8 +9,8 @@
 <table class="table table-bordered table-hover table-striped">
 	<thead>
 		<tr>
-			<th>date</th>
-			<th>item</th>
+			<th>Date</th>
+			<th>Item</th>
 		</tr>
 	</thead>
 	<tbody>
