@@ -1,0 +1,49 @@
+﻿create table Blog (id integer,
+name varchar(255), 
+url varchar(1000), 
+user_id integer, 
+primary key (id))
+
+
+create table Item (id integer not null, 
+description clob, 
+link varchar(1000), 
+published_date timestamp, 
+title varchar(1000), 
+blog_id integer, 
+primary key (id));
+
+
+create table Role (id integer, 
+name varchar(255),
+primary key (id));
+
+create table app_user (id integer,
+email varchar(255), 
+enabled VARCHAR2(1) , 
+name varchar(255), 
+password varchar(255), 
+primary key (id));
+
+create table app_user_Role (users_id integer not null, 
+roles_id integer not null);
+
+alter table app_user 
+add constraint UK_APP_USER  
+unique (name);
+
+alter table Blog 
+add constraint FK_BLOG_USER foreign key (user_id) 
+references app_user;
+
+alter table Item 
+add constraint FK_ITEM_BLOG foreign key (blog_id) 
+references Blog;
+
+alter table app_user_Role 
+add constraint FK_APP_USER_ROLE foreign key (roles_id) 
+references Role;
+
+alter table app_user_Role
+add constraint FK_USER_ROLE_APP_USER foreign key (users_id)
+references app_user;

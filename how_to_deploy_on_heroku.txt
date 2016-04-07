@@ -1,0 +1,20 @@
+How to deploy app on heroku.com - free server for deploy java app:
+====================================================================
+Important you must to have already somefile.war created with Maven.
+When you are already with all developing and all test will passed sucessfuly you can
+right click on project and click Run As/ Maven Build / and write package and press enter.
+In console you can see where is location of war file.
+ 
+1. Register on heroku.com: 
+	- from UI navigate ti dashboard and create new app!
+	- for example ehubjava (in my case)
+2. Google search : heroku toolbelt and download from here https://toolbelt.heroku.com/windows.
+3. Install app, only pres next till finish.
+4. Run cmd.exe and write >heroku login. Enter creditentils and wait.
+5. Normally first login faild :). Dont panic. Repeat 4th step again!
+6. Navigate with command cd to directiry where is your file somefile.war. 
+7. Install on next line described on - https://devcenter.heroku.com/articles/war-deployment in cmd.exe;
+ - heroku plugins:install https://github.com/heroku/heroku-deploy
+wait for instalation plugin
+
+	
