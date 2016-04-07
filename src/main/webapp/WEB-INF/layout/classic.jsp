@@ -5,6 +5,7 @@
 <html>
 <head>
 
+<!--used for li class active a href -->
 <%@ taglib uri="http://www.springframework.org/tags" prefix="spring" %>
 
 <%@ taglib uri="http://www.springframework.org/security/tags" prefix="security" %>
@@ -44,7 +45,8 @@
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="<spring:url value="/" />">JBA</a>
+            <!-- linked to home.html -->
+            <a class="navbar-brand" href="<spring:url value="/" />">e-Hub</a>
           </div>
           <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav">

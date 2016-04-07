@@ -36,8 +36,12 @@ public class InitDbService {
 	@Autowired
 	private ItemRepository itemRepository;
 
+	//This will execute immediately after run application. 
+	//In dev mode execute after every restart the server. HSQL is inmemory database
+	//In prod mode if there is no data in empty database postgree, oracle , etc. 
 	@PostConstruct
 	public void init() {
+		// check if in developer mode and there is role admin don't seed, populate bellow data!
 		if (roleRepository.findByName("ROLE_ADMIN") == null) {
 			Role roleUser = new Role();
 			roleUser.setName("ROLE_USER");
@@ -58,24 +62,26 @@ public class InitDbService {
 			userAdmin.setRoles(roles);
 			userRepository.save(userAdmin);
 
-			Blog blogJavavids = new Blog();
-			blogJavavids.setName("JavaVids");
-			blogJavavids
-					.setUrl("http://feeds.feedburner.com/javavids?format=xml");
-			blogJavavids.setUser(userAdmin);
-			blogRepository.save(blogJavavids);
+			Blog blogNakov = new Blog();
+			blogNakov.setName("NakovBlog");
+			// url must contain xml with rss feed  
+			// all other link can't expected result. Not will throw exception but put only link in database.
+			blogNakov
+					.setUrl("http://www.nakov.com/feed/");
+			blogNakov.setUser(userAdmin);
+			blogRepository.save(blogNakov);
 
 			// Item item1 = new Item();
-			// item1.setBlog(blogJavavids);
+			// item1.setBlog(blogJ);
 			// item1.setTitle("first");
-			// item1.setLink("http://www.javavids.com");
+			// item1.setLink("http://feeds.bbci.co.uk/news/world/rss.xml");
 			// item1.setPublishedDate(new Date());
 			// itemRepository.save(item1);
 			//
 			// Item item2 = new Item();
-			// item2.setBlog(blogJavavids);
+			// item2.setBlog(blogV);
 			// item2.setTitle("second");
-			// item2.setLink("http://www.javavids.com");
+			// item2.setLink("http://feeds.bbci.co.uk/news/world/rss.xml");
 			// item2.setPublishedDate(new Date());
 			// itemRepository.save(item2);
 		}

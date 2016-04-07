@@ -6,15 +6,17 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>war</packaging>
 
+
 	<!-- Shared version number properties -->
 	<properties>
-		<org.springframework.version>4.0.2.RELEASE</org.springframework.version>
+		<org.springframework.version>4.2.5.RELEASE</org.springframework.version>
 		<apache.tiles>3.0.3</apache.tiles>
 		<spring.security.version>3.2.3.RELEASE</spring.security.version>
 	</properties>
 
 	<dependencies>
 
+	<!-- add depedeny for postgree mode of app -->
 	<dependency>
 		<groupId>postgresql</groupId>
 		<artifactId>postgresql</artifactId>
@@ -26,7 +28,8 @@
 		<artifactId>commons-dbcp</artifactId>
 		<version>1.4</version>
 	</dependency>
-
+	<!-- end -->
+	
 	<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>

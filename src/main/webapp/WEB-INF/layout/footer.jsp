@@ -2,5 +2,5 @@
     pageEncoding="UTF-8"%>
 
 <p> &copy; Stanislav Stanev <p>
-<p>version: 1.0</p>
-<p><a href = "http://donstany.github.io/" target="_blank">project is published at donstany Git Hub</a><p>
+<p>version: 20060403 1.0</p>
+<p><a href = "http://donstany.github.io/" target="_blank">project is published at donstany's Git Hub</a><p>

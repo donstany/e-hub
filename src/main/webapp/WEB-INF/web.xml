@@ -21,6 +21,7 @@
     <url-pattern>*.json</url-pattern>
     <url-pattern>*.xml</url-pattern>
   </servlet-mapping>
+ <!--  define new location of context different from dispatcher-servlet located at applicationCOntext.xml--> 
   <listener>
     <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
   </listener>

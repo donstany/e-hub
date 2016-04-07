@@ -3,6 +3,7 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
+	<!-- instead of jdbc this snippets is copied from Hello world from Heroku.com -->
    <bean class="java.net.URI" id="dbUrl">
       <constructor-arg value="#{systemEnvironment['DATABASE_URL']}" />
    </bean>
@@ -13,6 +14,7 @@
       <property name="username" value="#{ @dbUrl.getUserInfo().split(':')[0] }" />
       <property name="password" value="#{ @dbUrl.getUserInfo().split(':')[1] }" />
    </bean>
+   <!-- instead end -->
 
 	<bean
 		class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean"

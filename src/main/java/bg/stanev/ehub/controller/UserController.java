@@ -26,6 +26,7 @@ public class UserController {
 	@Autowired
 	private BlogService blogService;
 
+	// bind the object from spring controller to jsp. form tag attribute commandName to model
 	@ModelAttribute("blog")
 	public Blog constructBlog() {
 		return new Blog();
