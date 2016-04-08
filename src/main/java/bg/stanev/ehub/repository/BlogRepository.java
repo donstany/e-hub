@@ -9,6 +9,6 @@ import bg.stanev.ehub.entity.User;
 
 public interface BlogRepository extends JpaRepository<Blog, Integer>{
 
-	// execute select all blogs asociated with user entity, spring will do it , user is a parameter of Blog entity
+	// execute select all blogs asociated with user entity, spring will do it "behind scene" , user is a parameter of Blog entity
 	List<Blog> findByUser(User user);
 }
