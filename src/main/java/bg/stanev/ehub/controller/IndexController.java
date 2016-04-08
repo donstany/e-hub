@@ -16,6 +16,7 @@ public class IndexController {
 	@RequestMapping("/index")
 	public String index(Model model) {
 		model.addAttribute("items", itemService.getItems());
+		// return "index" must be the same like in defs/general.xml <definition name="index" ...
 		return "index";
 	}
 }

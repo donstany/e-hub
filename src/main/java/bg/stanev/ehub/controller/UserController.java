@@ -32,6 +32,7 @@ public class UserController {
 		return new Blog();
 	}
 
+	// model is created from front controller . front controller creates a model which is a map
 	@RequestMapping("/account")
 	public String account(Model model, Principal principal) {
 		String name = principal.getName();
