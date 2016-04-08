@@ -53,6 +53,8 @@
     <param-name>defaultHtmlEscape</param-name>
     <param-value>true</param-value>
   </context-param>
+ 
+ <!--  define mode of application choose dev for development mode and prod for deployment -->
   <context-param>
     <param-name>spring.profiles.default</param-name>
     <param-value>dev</param-value>

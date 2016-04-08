@@ -27,7 +27,7 @@ public class RssServiceTest {
 		List<Item> items = rssService.getItems(new File("test-rss/nakov.xml"));
 		assertEquals(15, items.size());
 		Item firstItem = items.get(0);
-		//assertEquals("Професия “Програмист” … и останалите ИТ професии – Наков @ УНСС", firstItem.getTitle());
+		assertEquals("Професия “Програмист” … и останалите ИТ професии – Наков @ УНСС", firstItem.getTitle());
 		assertEquals("http://www.nakov.com/blog/2016/03/31/developers-qas-it-professions-nakov-at-unwe/", firstItem.getLink());
 		
 	}

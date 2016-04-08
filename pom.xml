@@ -12,109 +12,127 @@
 		<org.springframework.version>4.2.5.RELEASE</org.springframework.version>
 		<apache.tiles>3.0.3</apache.tiles>
 		<spring.security.version>3.2.3.RELEASE</spring.security.version>
+		<postgree.version>9.4.1208</postgree.version>
+		<connection.pooling>1.4</connection.pooling>
+		<junit.version>4.11</junit.version>
+		<hibernate.validator>5.1.0.Final</hibernate.validator>
+		<jstl.version>1.2</jstl.version>
+		<hypersonic.database>2.3.2</hypersonic.database>
+		<spring.framework.data>1.5.1.RELEASE</spring.framework.data>
+		<hibernate.entitymanager.version>4.3.4.Final</hibernate.entitymanager.version>
+		<javax.servlet.api>3.0.1</javax.servlet.api>
+		<javax.servlet.jsp>2.2.1</javax.servlet.jsp>
+		<slf4j.version>	1.7.6</slf4j.version>
+		<jetty.version>9.1.3.v20140225</jetty.version>
+		<tomcat.maven.plugin>2.2</tomcat.maven.plugin>
+		<maven.compiler>3.1</maven.compiler>
+		<java.version>1.8</java.version>
 	</properties>
 
 	<dependencies>
 
-	<!-- add depedeny for postgree mode of app -->
+	<!-- add depedency for postgree mode of app -->
 	<dependency>
-		<groupId>postgresql</groupId>
-		<artifactId>postgresql</artifactId>
-		<version>9.1-901-1.jdbc4</version>
+		  <groupId>org.postgresql</groupId>
+		  <artifactId>postgresql</artifactId>
+		  <version>${postgree.version}</version>
 	</dependency>
 	
+	<!-- connection pooling -->
 	<dependency>
 		<groupId>commons-dbcp</groupId>
 		<artifactId>commons-dbcp</artifactId>
-		<version>1.4</version>
+		<version>${connection.pooling}</version>
 	</dependency>
 	<!-- end -->
 	
 	<dependency>
-			<groupId>junit</groupId>
-			<artifactId>junit</artifactId>
-			<version>4.11</version>
-			<scope>test</scope>
-		</dependency>
+		<groupId>junit</groupId>
+		<artifactId>junit</artifactId>
+		<version>${junit.version}</version>
+		<scope>test</scope>
+	</dependency>
 
-		<dependency>
-			<groupId>org.hibernate</groupId>
-			<artifactId>hibernate-validator</artifactId>
-			<version>5.1.0.Final</version>
-		</dependency>
+	<dependency>
+		<groupId>org.hibernate</groupId>
+		<artifactId>hibernate-validator</artifactId>
+		<version>${hibernate.validator}</version>
+	</dependency>
 
-		<dependency>
-			<groupId>org.springframework.security</groupId>
-			<artifactId>spring-security-taglibs</artifactId>
-			<version>${spring.security.version}</version>
-		</dependency>
+	<dependency>
+		<groupId>org.springframework.security</groupId>
+		<artifactId>spring-security-taglibs</artifactId>
+		<version>${spring.security.version}</version>
+	</dependency>
 
-		<dependency>
-			<groupId>org.springframework.security</groupId>
-			<artifactId>spring-security-web</artifactId>
-			<version>${spring.security.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.security</groupId>
-			<artifactId>spring-security-config</artifactId>
-			<version>${spring.security.version}</version>
-		</dependency>
+	<dependency>
+		<groupId>org.springframework.security</groupId>
+		<artifactId>spring-security-web</artifactId>
+		<version>${spring.security.version}</version>
+	</dependency>
+	<dependency>
+		<groupId>org.springframework.security</groupId>
+		<artifactId>spring-security-config</artifactId>
+		<version>${spring.security.version}</version>
+	</dependency>
 
-		<dependency>
-			<groupId>jstl</groupId>
-			<artifactId>jstl</artifactId>
-			<version>1.2</version>
-		</dependency>
+	<dependency>
+		<groupId>jstl</groupId>
+		<artifactId>jstl</artifactId>
+		<version>${jstl.version}</version>
+	</dependency>
 
-		<dependency>
-			<groupId>org.hsqldb</groupId>
-			<artifactId>hsqldb</artifactId>
-			<version>2.3.2</version>
-		</dependency>
+	<!--  hypersonic inmemory database -->
+	<dependency>
+		<groupId>org.hsqldb</groupId>
+		<artifactId>hsqldb</artifactId>
+		<version>${hypersonic.database}</version>
+	</dependency>
 
-		<dependency>
-			<groupId>org.springframework.data</groupId>
-			<artifactId>spring-data-jpa</artifactId>
-			<version>1.5.1.RELEASE</version>
-		</dependency>
+	<dependency>
+		<groupId>org.springframework.data</groupId>
+		<artifactId>spring-data-jpa</artifactId>
+		<version>${spring.framework.data}</version>
+	</dependency>
+		
+	<dependency>
+		<groupId>org.hibernate</groupId>
+		<artifactId>hibernate-entitymanager</artifactId>
+		<version>${hibernate.entitymanager.version}</version>
+	</dependency>
 
-		<dependency>
-			<groupId>org.hibernate</groupId>
-			<artifactId>hibernate-entitymanager</artifactId>
-			<version>4.3.4.Final</version>
-		</dependency>
+	<dependency>
+		<groupId>javax.servlet</groupId>
+		<artifactId>javax.servlet-api</artifactId>
+		<version>${javax.servlet.api}</version>
+		<scope>provided</scope>
+	</dependency>
 
-		<dependency>
-			<groupId>javax.servlet</groupId>
-			<artifactId>javax.servlet-api</artifactId>
-			<version>3.0.1</version>
-			<scope>provided</scope>
-		</dependency>
+	<dependency>
+		<groupId>javax.servlet.jsp</groupId>
+		<artifactId>javax.servlet.jsp-api</artifactId>
+		<version>${javax.servlet.jsp}</version>
+		<scope>provided</scope>
+	</dependency>
 
-		<dependency>
-			<groupId>javax.servlet.jsp</groupId>
-			<artifactId>javax.servlet.jsp-api</artifactId>
-			<version>2.2.1</version>
-			<scope>provided</scope>
-		</dependency>
+	<!-- depedency for layout framework -->
+	<dependency>
+		<groupId>org.apache.tiles</groupId>
+		<artifactId>tiles-core</artifactId>
+		<version>${apache.tiles}</version>
+	</dependency>
 
-		<dependency>
-			<groupId>org.apache.tiles</groupId>
-			<artifactId>tiles-core</artifactId>
-			<version>${apache.tiles}</version>
-		</dependency>
+	<dependency>
+		<groupId>org.apache.tiles</groupId>
+		<artifactId>tiles-jsp</artifactId>
+		<version>${apache.tiles}</version>
+	</dependency>
 
-		<dependency>
-			<groupId>org.apache.tiles</groupId>
-			<artifactId>tiles-jsp</artifactId>
-			<version>${apache.tiles}</version>
-		</dependency>
-
-		<dependency>
-			<groupId>org.slf4j</groupId>
-			<artifactId>slf4j-log4j12</artifactId>
-			<version>1.7.6</version>
-		</dependency>
+	<dependency>
+		<groupId>org.slf4j</groupId>
+		<artifactId>slf4j-log4j12</artifactId>
+		<version>${slf4j.version}</version>
+	</dependency>
 
 		<!-- Core utilities used by other modules. Define this if you use Spring 
 			Utility APIs (org.springframework.core.*/org.springframework.util.*) -->
@@ -237,28 +255,28 @@
 			<version>${org.springframework.version}</version>
 			<scope>test</scope>
 		</dependency>
-
 	</dependencies>
+
 
 	<build>
 		<plugins>
 			<plugin>
 				<groupId>org.eclipse.jetty</groupId>
 				<artifactId>jetty-maven-plugin</artifactId>
-				<version>9.1.3.v20140225</version>
+				<version>${jetty.version}</version>
 			</plugin>
 			<plugin>
 				<groupId>org.apache.tomcat.maven</groupId>
 				<artifactId>tomcat7-maven-plugin</artifactId>
-				<version>2.2</version>
+				<version>${tomcat.maven.plugin}</version>
 			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
-				<version>3.1</version>
+				<version>${maven.compiler}</version>
 				<configuration>
-					<source>1.8</source>
-					<target>1.8</target>
+					<source>${java.version}</source>
+					<target>${java.version}</target>
 				</configuration>
 			</plugin>
 		</plugins>

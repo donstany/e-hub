@@ -20,7 +20,7 @@ every item contain
 -title
 -description
 -link
--date /convert it to objet SimpleFormat/
+-date /convert it to object SimpleFormat/
 
 return list of items
 ------------------
