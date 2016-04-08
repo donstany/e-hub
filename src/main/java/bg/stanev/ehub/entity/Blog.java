@@ -29,7 +29,9 @@ public class Blog {
 	@Size(min = 1, message = "Name must be at least 1 character!")
 	private String name;
 
+	/*many blog have only one user - annotation for relation*/
 	@ManyToOne
+	/*user_id is a name of Foreign Key*/
 	@JoinColumn(name = "user_id")
 	private User user;
 

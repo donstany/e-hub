@@ -29,8 +29,10 @@
 </head>
 <body>
 
+
 <%@ taglib uri="http://tiles.apache.org/tags-tiles-extras" prefix="tilesx" %>
 
+<!-- put value of current in page scope -->
 <tilesx:useAttribute name="current"/>
 
 <div class="container">
