@@ -26,12 +26,13 @@ public class UserController {
 	@Autowired
 	private BlogService blogService;
 
-	// bind the object from spring controller to jsp. form tag attribute commandName to model
+	// bind the object from spring controller to .jsp. form tag attribute commandName to model
 	@ModelAttribute("blog")
 	public Blog constructBlog() {
 		return new Blog();
 	}
 
+	// model is created from front controller . front controller creates a model which is a map
 	@RequestMapping("/account")
 	public String account(Model model, Principal principal) {
 		String name = principal.getName();

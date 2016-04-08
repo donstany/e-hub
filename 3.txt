@@ -1,0 +1,68 @@
+
+4. Apache Tiles & Framework Spring integration, Apache Tiles basics, how to use template, tiles definitions and attributes.
+tiles
+one single page aplication
+create layouts
+in index.jsp can apache tiles template - xml contains definition of sinle page app
+add in dispatcher servlet tiles configurer bean. general.xml and integration
+from tutorial apache tiles fill general.xml 
+in pom xml add dependency tiles, slf4j  
+definition have inheritance
+
+one common - havent body 
+one for home page - index extend  common
+
+add in layout - 
+
+classic.jsp file -> this a template , must refer and add taglib - have 
+
+5.How to use Twitter Bootstrap to make our application pretty :-) I will use Twitter Bootstrap and JQuery from CDN (Content Delivery Network). Our web application will have responsive layout (useful for mobile devices)
+
+in classic.jsp add bootstrap template, - getting started in google. add and jquery - google jquery cdn.
+cdn is hosted lib and webpage will load faster , comes wrom web server.
+
+google -> getbootstrap example navbar see the source code. copy only body. remove unencesery button. 
+first link will be home <spring url = /- absolute url> point to home page
+
+6. Spring web app tutorial 6: Servlet and JSP API : javavids - in pom.xml add javax servlet and javax api and set scope provided - havent add in classpath in .war file . go to project clean and maven recompile all project.
+
+7. Spring web app tutorial 7: Spring root context : javavids
+How to use Spring root context using ContextLoaderListener and configuration file applicationContext.xml. How to effectively use context:component-scan with context:exclude-filter.
+
+best practice is not all beans in one servlet in another spring servlet differnet from dispatcher servlet
+
+add applicationContext.xml -> spring read this file and create context, here is single service, repository, layer. Only presentation layer define in dispatcher servlet all other define in applicationContext.xml .
+here must cannot scan controllers ->responsible for dispatcher
+
+8. Spring web app tutorial 8: persistence : javavids
+How to integrate Hibernate with Spring and Spring Data JPA using LocalContainerEntityManagerFactoryBean? I will use test HSQL test database (later will be used PostgreSQL). In configuration I won't use persistence.xml. The Hibernate will print SQL commands to standard output (using hibernate.show_sql) and the database will be created automatically from entities (using hibernate.hbm2ddl.auto). Plus hello 
+
+google spring data jpa add in pom.xml
+
+google search jpa integrate with spring search a bean with databace , add hipersonic database
+
+
+add jdbc namespace in applicationContext.xml add hypersonic embeded HSQL and create id=dataSource;
+
+add id emf and specify the package with entities
+another is a dataSource
+
+must enable transaction add tx tag , and bean transactionManager show dataSource to transactionManager.
+
+add entity User
+
+9. Spring web app tutorial 9: JPA entities : javavids
+
+How to create Java entities with relationships (OneToMany, ManyToMany, ManyToOne). How to validate relationship using Eclipse JPA Diagram Editor. 
+
+set facets and set jpa project, create persistance xml file. 
+add entiti in persistance.xml
+
+
+10. Spring web app tutorial 10: Spring Data JPA basics : javavids
+create data jpa in application - add spring data jpa 
+https://youtu.be/eBMDgbtlNoE?list=PLmcxdcWPhFqMq2BctGktOcIJKUw23wJeh
+
+jpa is interface each entity works with each entity  extends repository form spring.data.jpa.data.repository
+
+

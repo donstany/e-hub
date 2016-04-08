@@ -7,6 +7,8 @@
 		<put-attribute name="footer" value="/WEB-INF/layout/footer.jsp" />
 	</definition>
 
+    <!-- important name="index" must be the same in index controller return "index" -->
+	<!-- current show active page -->
 	<definition name="index" extends="common">
 		<put-attribute name="title" value="e-Hub" />
 		<put-attribute name="body" value="/WEB-INF/jsp/index.jsp" />
