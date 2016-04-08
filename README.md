@@ -1,6 +1,6 @@
 			<h1>E HUB!</h1>
 			<h2>Place to see all news for your feed</h2>
-			<h3>Features:<h3>
+			<h3>Features: <h3>
 	
 		-responsive design Twitter Bootstrap, support auto response depend screen size;
 		-easy to add new styling  use Apache Tile for layout engine;
