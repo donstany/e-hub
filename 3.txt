@@ -64,5 +64,10 @@ create data jpa in application - add spring data jpa
 https://youtu.be/eBMDgbtlNoE?list=PLmcxdcWPhFqMq2BctGktOcIJKUw23wJeh
 
 jpa is interface each entity works with each entity  extends repository form spring.data.jpa.data.repository
+repository is integration layer 
+		
+		initDbservice is Bussiness layer spring inject RoleRepository interface 
+		
+		
 
 
