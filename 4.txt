@@ -1,1 +1,2 @@
 15: Hibernate Lazy Initialization Exception : javavids 
+in user-detail.
