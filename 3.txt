@@ -1,28 +1,29 @@
 
-4. Apache Tiles & Framework Spring integration, Apache Tiles basics, how to use template, tiles definitions and attributes.
+4. Apache Tiles & Framework Spring integration, Apache Tiles basics, how to use template, tiles definitions and attributes. https://tiles.apache.org/
 tiles
 one single page aplication
+spring contains apache support
 create layouts
-in index.jsp can apache tiles template - xml contains definition of sinle page app
-add in dispatcher servlet tiles configurer bean. general.xml and integration
-from tutorial apache tiles fill general.xml 
-in pom xml add dependency tiles, slf4j  
-definition have inheritance
+	in index.jsp can apache tiles template - xml contains definition of sinle page app
+	- add in dispatcher servlet tiles configurer bean. general.xml and integration
+	from tutorial apache tiles fill general.xml 
+	in pom xml add dependency tiles, slf4j  
+	definition have inheritance
 
-one common - havent body 
-one for home page - index extend  common
+	one common - havent body 
+	one for home page - index extend  common
 
-add in layout - 
+	add in layout - 
 
-classic.jsp file -> this a template , must refer and add taglib - have 
+	classic.jsp file -> this a template , must refer and add taglib - have 
 
 5.How to use Twitter Bootstrap to make our application pretty :-) I will use Twitter Bootstrap and JQuery from CDN (Content Delivery Network). Our web application will have responsive layout (useful for mobile devices)
 
-in classic.jsp add bootstrap template, - getting started in google. add and jquery - google jquery cdn.
-cdn is hosted lib and webpage will load faster , comes wrom web server.
+	in classic.jsp add bootstrap template, - getting started in google. add and jquery - google jquery cdn.
+	cdn is hosted lib and webpage will load faster , comes wrom web server.
 
-google -> getbootstrap example navbar see the source code. copy only body. remove unencesery button. 
-first link will be home <spring url = /- absolute url> point to home page
+	google -> getbootstrap example navbar see the source code. copy only body. remove unencesery button. 
+	first link will be home <spring url = /- absolute url> point to home page
 
 6. Spring web app tutorial 6: Servlet and JSP API : javavids - in pom.xml add javax servlet and javax api and set scope provided - havent add in classpath in .war file . go to project clean and maven recompile all project.
 
