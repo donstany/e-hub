@@ -22,6 +22,7 @@ import bg.stanev.ehub.repository.UserRepository;
 
 @Transactional
 @Service
+// service construct initial state of database
 public class InitDbService {
 
 	@Autowired
@@ -36,7 +37,7 @@ public class InitDbService {
 	@Autowired
 	private ItemRepository itemRepository;
 
-	//This will execute immediately after run application. 
+	//This will execute immediately after run application and deployed in server. 
 	//In dev mode execute after every restart the server. HSQL is inmemory database
 	//In prod mode if there is no data in empty database postgree, oracle , etc. 
 	@PostConstruct
@@ -55,7 +56,8 @@ public class InitDbService {
 			userAdmin.setEnabled(true);
 			userAdmin.setName("admin");
 			BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
-			userAdmin.setPassword(encoder.encode("admin"));
+			/*userAdmin.setPassword(encoder.encode("admin"));
+			admin have two roles admin and user*/
 			List<Role> roles = new ArrayList<Role>();
 			roles.add(roleAdmin);
 			roles.add(roleUser);
@@ -63,11 +65,12 @@ public class InitDbService {
 			userRepository.save(userAdmin);
 
 			Blog blogNakov = new Blog();
-			blogNakov.setName("NakovBlog");
+			blogNakov.setName("Nakov Blog");
 			// url must contain xml with rss feed  
 			// all other link can't expected result. Not will throw exception but put only link in database.
 			blogNakov
 					.setUrl("http://www.nakov.com/feed/");
+			//this blog belonds to the administrator
 			blogNakov.setUser(userAdmin);
 			blogRepository.save(blogNakov);
 

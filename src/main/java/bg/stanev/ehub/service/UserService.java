@@ -49,7 +49,9 @@ public class UserService {
 		User user = findOne(id);
 		List<Blog> blogs = blogRepository.findByUser(user);
 		for (Blog blog : blogs) {
-			List<Item> items = itemRepository.findByBlog(blog, new PageRequest(0, 10, Direction.DESC, "publishedDate"));
+			/*new PageRequest(0, 20, Direction.DESC, "publishedDate") - 0 is first page , 20 is a record on one page -> limit sql, retrieve from Db, 
+			 * direction is a sorting  mechanism relevant to order by sql, on which attribute -> "publishedDate"*/
+			List<Item> items = itemRepository.findByBlog(blog, new PageRequest(0, 20, Direction.DESC, "publishedDate"));
 			blog.setItems(items);
 		}
 		user.setBlogs(blogs);

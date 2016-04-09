@@ -3,7 +3,8 @@
 
 <%@ include file="../layout/taglib.jsp"%>
 
-<h1>Latest news from the Java world:</h1>
+<h1>Latest news from Bulgarian Silicon Valley:</h1>
+<h4>Read and subscribe  for all Rss feed <u>updated and actual</u> by your interesting:</h4>
 
 
 <table class="table table-bordered table-hover table-striped">

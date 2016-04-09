@@ -43,6 +43,7 @@ public class User {
 	@JoinTable
 	private List<Role> roles;
 
+	/*one user have many blogs, avoid exception with Cascade.Remove*/
 	@OneToMany(mappedBy = "user", cascade = CascadeType.REMOVE)
 	private List<Blog> blogs;
 

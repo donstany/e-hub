@@ -39,6 +39,7 @@ public class Item {
 	private String link;
 
 	@ManyToOne
+	/*relation stored in the database name = "blog_id"*/
 	@JoinColumn(name = "blog_id")
 	private Blog blog;
 

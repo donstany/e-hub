@@ -21,8 +21,10 @@ public class AdminController {
 		return "users";
 	}
 
+	/*{id} is a path variable dinamic part of url , front controller convert to integer*/
 	@RequestMapping("/{id}")
 	public String detail(Model model, @PathVariable int id) {
+		// with method findOneWithBlogs(name) we correct lazy initialization exception
 		model.addAttribute("user", userService.findOneWithBlogs(id));
 		return "user-detail";
 	}

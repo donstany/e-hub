@@ -3,15 +3,18 @@
 
 <%@ include file="../layout/taglib.jsp" %>
 
+<!-- from spring tag form:form commandName="user" automatically bind the data from input field to object user and fill his property, spring care about it! -->
+<!-- in controller with @ModelAttribute spring create a object from field with attribute path="name" -->
 <form:form commandName="user" cssClass="form-horizontal registrationForm">
 
 	<c:if test="${param.success eq true}">
-		<div class="alert alert-success">Registration successfull!</div>
+		<div class="alert alert-success">Registration successful! Welcome! </div>
 	</c:if>
 
 	<div class="form-group">
 		<label for="name" class="col-sm-2 control-label">Name:</label>
 		<div class="col-sm-10">
+		    <!--  path="name" -->
 			<form:input path="name" cssClass="form-control" />
 			<form:errors path="name" />
 		</div>
