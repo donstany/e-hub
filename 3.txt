@@ -1,3 +1,5 @@
+hint ho to add region in eclipse:
+http://stackoverflow.com/questions/2344524/java-equivalent-to-region-in-c-sharp
 
 4. Apache Tiles & Framework Spring integration, Apache Tiles basics, how to use template, tiles definitions and attributes. https://tiles.apache.org/
 tiles
@@ -71,4 +73,4 @@ repository is integration layer
 		
 		
 
-
+11

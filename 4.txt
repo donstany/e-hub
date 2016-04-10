@@ -1,2 +1,6 @@
 15: Hibernate Lazy Initialization Exception : javavids 
 in user-detail.
+
+<script>
+$(document).ready(function(){${"body"}.hide();});
+</script>
