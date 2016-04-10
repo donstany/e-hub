@@ -1,3 +1,0 @@
--Dspring.profiles.active="dev"
-tomcat expert
-http://www.tomcatexpert.com/blog
