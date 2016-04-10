@@ -1,0 +1,46 @@
+﻿generate jaxb classes 
+http://europa.eu/rapid/conf/RSS20.xsd
+put in main dir in app and rename to rss.xsd
+right click to file/ click generate/ jaxb and choose destination package
+in our case bg.stanev.rss will generate all classes 
+
+--------------
+Unmarshaling XML file:
+
+in service package create rssservice
+create RssService.java
+
+there getItems it contain "boilerplate" code
+important unmarshaller converts xml in java object
+here we can put object source who can be file or url link
+tRss is a root elem in xml fail
+rss has channels ->rss.getChannel()
+in channels has many item
+every item contain
+-title
+-description
+-link
+-date /convert it to object SimpleFormat/
+
+return list of items
+------------------
+Junit test 
+
+test getItems
+in RssService
+cr
+
+
+bobi
+boby@abv.bg
+12345
+12345
+
+stanislav
+123456
+
+rss it
+http://feeds.feedburner.com/techcrunch/startups?format=xml
+
+http://ehubjava.herokuapp.com
+
