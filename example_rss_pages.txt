@@ -1,0 +1,5 @@
+https://sports.yahoo.com/top/rss.xml
+https://sports.yahoo.com/golf/rss.xml
+http://feeds.bbci.co.uk/news/rss.xml?edition=uk
+http://feeds.bbci.co.uk/news/business/rss.xml?edition=uk
+http://www.bta.bg/bg/rss/free

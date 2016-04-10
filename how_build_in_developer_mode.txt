@@ -1,2 +1,10 @@
+in web.xml is defined current mode "dev" or "prod"
+in applicationContext.xml must import tw different configuration for
+ "dev" - HSQL inMemory Db
+ "prod" - Postgree Db for Heroku upload
+
+=================================
+Below is script wich can shange on Maven build the mode of applocation:
+
 script which will be put it in package Maven build - Jre tab
 -Dspring.profiles.active="dev"
