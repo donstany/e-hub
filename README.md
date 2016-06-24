@@ -18,7 +18,7 @@
 		Please be patient if you access address at first time.
 		The server will weak up between 2 to 4 minutes.
 
-		But after that all will be fine and there are no more latency time when you surfing in website :)
+		But after that all will be fine and there are no more latency time when you surfing in website! 
 		
 		Main Functionalty:
 		-------------------------
@@ -49,7 +49,7 @@
 		- prevent cross site forgery escape html and javascipt injection;
 		
 
-		Have a nice surfing ...!
+		Have a nice surfing ...! :)
 		
 		
 		
